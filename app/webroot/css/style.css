@@ -1,0 +1,408 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	width: 100%;
+	background: #6598F8 url('../img/bottom.gif') repeat-x bottom left;
+	background-attachment: fixed;
+	height: 100%;
+	margin: 0;
+	font: 12px Tahoma, Helvetica, Arial;
+	color: #333;
+}
+
+body {
+	width: 100%;
+	background: transparent url('../img/top.gif') repeat-x fixed top left;
+	height: 100%;
+	margin: 0;
+}
+
+a img {
+	border : 0px;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #222;
+}
+
+.bar {
+	width: 100%;
+	margin: 3px auto;
+	height: 2px;
+	background: #FFC;
+}
+
+#container {
+	width: 900px;
+	margin: 0px auto;
+	padding: 21px 0px;
+	position: relative;
+}
+
+#logo {
+	width: 100px;
+	height: 70px;
+	padding: 25px 30px 25px 30px;
+	border-left: 10px solid #DDD;
+	border-right: 10px solid #DDD;
+	border-top: 10px solid #DDD;
+	-webkit-border-top-left-radius: 30px; -moz-border-radius-topleft: 30px;
+	-webkit-border-top-right-radius: 30px; -moz-border-radius-topright: 30px;
+	background: #b3cbf8;
+	
+	position: absolute;
+	top: 10px;
+	left: 0px;
+}
+
+#logo2 {
+	width: 170px;
+	height: 30px;
+	background: #b3cbf8;
+	border-left: 10px solid #DDD;
+	position: absolute;
+	top: 130px;
+	z-index: -1;
+}
+
+#title {
+	width: 610px;
+	height: 40px;
+	margin-top: 15px;
+	margin-left: 10px;
+	padding: 40px 40px 40px;
+	border-left: 10px solid #DDD;
+	border-bottom: 10px solid #DDD;
+	-webkit-border-bottom-left-radius: 30px; -moz-border-radius-bottomleft: 30px;
+	
+	position: relative;
+	left: 160px;
+	z-index: 2;
+}
+
+#title img {
+	position: relative;
+	top: -15px;
+}
+
+#main-body {
+	width: 830px;
+	min-height: 80%;
+	background: #b3cbf8;
+	background: #95b7f8;
+	border-left: 10px solid #DDD;
+	border-right: 10px solid #DDD;
+	border-bottom: 10px solid #DDD;
+	-webkit-border-top-right-radius: 30px; -moz-border-radius-topright: 30px;
+	-webkit-border-bottom-right-radius: 30px; -moz-border-radius-bottomright: 30px;
+	-webkit-border-bottom-left-radius: 30px; -moz-border-radius-bottomleft: 30px;
+	
+	position: relative;
+	top: -10px;
+	
+	margin: 0;
+	padding: 20px 25px 0px 25px; 
+}
+
+#top-right-corner {
+	border-top: 10px solid #DDD;
+	border-right: 10px solid #DDD;
+	-webkit-border-top-right-radius: 30px; -moz-border-radius-topright: 30px;
+	
+	position: absolute;
+	top: 0px;
+	right: -10px;
+	z-index: 2;
+	
+	width: 100px;
+	height: 100px;
+}
+
+#menu {
+	position: relative;
+	left: -25px;
+	top: -20px;
+	width: 880px;
+	height: 31px;
+	background: #b3cbf8 url('../img/test.png') no-repeat bottom left;
+	padding-top: 17px;
+	-webkit-border-top-right-radius: 30px; -moz-border-radius-topright: 30px;
+}
+
+#menu .bar {
+	margin-top: 0px;
+}
+
+#menu-links {
+	padding: 4px 15px;
+	width: 850px;
+}
+
+.user-links {
+	float: right;
+	position: relative;
+	z-index: 5;
+}
+
+#footer {
+	position: relative;
+	width: 880px;
+	left: -25px;
+	margin-top: 30px;
+	padding: 3px 0px;
+}
+
+#footer-text {
+	padding: 15px;
+}
+
+#events {
+	position: absolute;
+	right: 5px;
+	width: 220px;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+#events p {
+	min-height: 100px;
+	font-size: 11px;
+}
+
+#events p img {
+	padding-left: 2px;
+}
+
+.form {
+	width: 250px;
+	text-align: right;
+}
+
+.form2 { 
+	width: 610px;
+	text-align: right;
+}
+
+#view .form2 select {
+	position: relative;
+        left:0px;
+        margin-left: 40px;
+}
+
+#view .form input {
+	width: 140px;
+	position: relative;
+	left: 0px;
+	margin-left: 40px;
+}
+
+#view .form select {
+        width: 140px;
+        position: relative;
+        left:0px;
+        margin-left: 40px;
+}
+
+
+#view {
+	border-right: 2px solid #DDD;
+	width: 620px;
+	min-height: 400px;
+}
+
+#view p {
+	width: 600px;
+}
+
+.news {
+	background: #FFFF8A url('../img/test2.png') no-repeat top left;
+	padding: 0px 3px 16px;
+	width: 600px;
+}
+
+.news-text {
+	background: #FFF;
+	padding: 1px 4px;
+	margin: -5px 3px 0px;
+	font-size: 11px;
+	position: relative;
+}
+
+#view .news-text p {
+	width: 590px;
+}
+
+.news-info {
+	font-size: 10px;
+	float: right;
+}
+
+div#login {
+	padding: 36px 36px 61px;
+}
+
+div#login div {
+        display: block;
+        height: 25px;
+}
+
+div#login div#login-text {
+	position: absolute;
+	left: 290px;
+	top: 5px;
+	padding-left: 10px;
+	border-left: 1px solid #333;
+	width: 290px;
+	height: 130px;
+}
+
+div#view div.news-text div#login-text p {
+	width: 290px;
+}
+
+div#view div#login input {
+	position: absolute;
+	left: 120px;
+}
+
+div#login div.submit {
+	position: absolute;
+	left: 110px;
+}
+
+div#join {
+	padding: 10px 20px 40px 20px;
+}
+
+div#join div {
+	height: 25px;
+}
+
+div#join input {
+	position: absolute;
+	left: 150px;
+}
+
+div#join label {
+	position: relative;
+	top: 5px;
+	font-weight: bold;
+}
+
+div#join div.join_text {
+	position: absolute;
+	left: 320px;
+	top: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	border-left: 1px solid #333;
+	height: 254px;
+	width: 260px;
+}
+
+div#view div.news-text div.join_text p {
+        width: 260px;
+}
+
+
+div#join div.submit {
+	position: absolute;
+	left: 100px;
+	bottom: 5px;
+}
+
+tr.altrow {
+	background: #FFF;
+}
+
+div#committee, div#lifetime {
+	width: 550px;
+	margin: 15px 25px;
+}
+
+div.member img {
+	vertical-align: top;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+	width: 60px;
+}
+
+div.member div.member-text {
+	display: inline-block;
+	font-size: 10px;
+}
+
+div.member {
+	margin: 5px 1px;
+	padding: 2px;
+	width: 173px;
+	background: #FFF;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	display: inline-block;
+}
+
+div.event {
+	width: 590px;
+	background: #FFF;
+	-webkit-border-radius: 5px; -moz-border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	position: relative;
+}
+
+div.event div.event-text {
+	display: inline-block;
+	width: 485px;
+}
+
+div.event img {
+	vertical-align: top;
+	padding: 0px 5px 0px 0px;
+}
+
+div.event-info {
+	float: right;
+	margin-top: -15px;
+	text-align: right;
+	font-size: 11px;
+}
+
+div#view div.event p {
+	width: 480px;
+	padding: 5px 0px;
+}
+
+div.hardware img {
+        vertical-align: top;
+        -webkit-border-radius: 5px; -moz-border-radius: 5px;
+        width: 100px;
+}
+
+div.hardware div.hardware-text {
+}
+
+div.hardware {
+        margin: 5px 15px;
+        padding: 5px;
+        width: 100px;
+        background: #FFF;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        display: inline-block;
+}
+
+div#committee-controls {
+	width: 200px;
+	display: inline-block;
+}
+
+div#view input, div#view select {
+	position: absolute;
+	left: 150px;
+}
+
+div#form div {
+	height: 25px;
+}

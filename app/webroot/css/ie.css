@@ -1,0 +1,47 @@
+#logo {
+	background: url('../img/logo-bg-ie.png') no-repeat top left;
+	border: 0px;
+	width: 180px;
+	height: 200px;
+}
+
+#top-right-corner {
+	border: 0px;
+	background: url('../img/tr.png') no-repeat top right;
+	margin-top: -30px;
+}
+
+#main-body {
+	top: 20px;
+}
+
+#ie-fix {
+	position: relative;
+	background: #b3cbf8;
+	width: 880px;
+	height: 20px;
+	top: -40px;
+	left: -25px;
+}
+
+#menu {
+	margin-top: -40px;
+}
+
+#title {
+	background: url('../img/heading-bg-ie.png') no-repeat bottom left;
+	border: 0px;
+	width: 600px;
+}
+
+#ie-fix2 {
+	width: 900px;
+	height: 35px;
+	background: url('../img/bottom-bg-ie.png') no-repeat bottom left;
+	margin-bottom: -33px;
+	margin-left: -35px;
+}
+
+#footer-text {
+	padding: 15px 15px 0px;
+}
