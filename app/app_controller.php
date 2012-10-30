@@ -4,9 +4,7 @@ class AppController extends Controller {
 
     function beforeFilter() {
         //Configure AuthComponent
-        $this->Auth->authorize = 'actions';
         $this->Auth->authError = "Sorry, you are lacking access.";
-        $this->Auth->actionPath = 'controllers/';
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'home');
