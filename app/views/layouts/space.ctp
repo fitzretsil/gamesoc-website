@@ -79,7 +79,7 @@
 			</h1>
 		</div>
 		<div id="menu">
-			<?php echo $this->Html->link( 'Home', 'http://www.gamesoc.org' ); ?>
+			<?php echo $this->Html->link( 'Home', '/' ); ?>
 			<?php echo $this->Html->link( 'Events', array( 'controller' => 'events' ) ); ?>
 			<?php echo $this->Html->link( 'About', array( 'controller' => 'pages', 'action' => 'display', 'about' ) ); ?>
 		</div>
