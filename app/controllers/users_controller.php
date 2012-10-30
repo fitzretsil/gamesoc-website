@@ -1,13 +1,37 @@
 <?php
+/**
+ * All User functionality is handled in here including login
+ * 
+ * For data specific functionality see the User Model and for
+ * the layout see the user views folder, each method will have
+ * its own layout file
+ * 
+ * @author fitzretsil
+ *
+ */
 class UsersController extends AppController {
 
+	/**
+	 * @var Controller Name
+	 */
 	var $name = 'Users';
 	
-	function index() {
+	/**
+	 * Admin method to display all currently registered users
+	 * 
+	 * Using the Paginate function defined in the Cake library's
+	 * Controller class
+	 */
+	function admin_index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
 	}
 
+	/**
+	 * Given a user's ID returns an array of that User's data
+	 *
+	 * @param string $id
+	 */
 	function view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid user', true));
@@ -16,7 +40,10 @@ class UsersController extends AppController {
 		$this->set('user', $this->User->read(null, $id));
 	}
 
-	function add() {
+	/**
+	 * Admin method to add a new user to the site
+	 */
+	function admin_add() {
 		if (!empty($this->data)) {
 			$this->User->create();
 			if ($this->User->save($this->data)) {
@@ -30,23 +57,38 @@ class UsersController extends AppController {
 		$this->set(compact('groups'));
 	}
 
-	function register() {
+	/**
+  	 * Function to allow a user to register
+  	 * 
+  	 * This should be retired in favour of the Facebook 
+  	 * registration method that exists below
+  	 */
+	 function register() {
 		if (!empty($this->data)) {
-                        $this->User->create();
-                        if ($this->User->save($this->data)) {
-                                $this->redirect(array('action' => 'registered'));
-                        } else {
-                                $this->Session->setFlash(__('The user could not be saved. Please, try again.', true));
-                        }
-                }
-                $groups = $this->User->Group->find('list');
-                $this->set(compact('groups'));
+			$this->User->create();
+			if ($this->User->save($this->data)) {
+				$this->redirect(array('action' => 'registered'));
+			} else {
+				$this->Session->setFlash(__('The user could not be saved. Please, try again.', true));
+			}
+		}
+		$groups = $this->User->Group->find('list');
+		$this->set(compact('groups'));
 	}
 
+	/**
+	 * Placeholder method to show the registered view
+	 */
 	function registered() {
 	}	
 
-	function edit($id = null) {
+	/**
+	 * Admin function to update a user's details given
+	 * their user id
+	 * 
+	 * @param string $id
+	 */
+	function admin_edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid user', true));
 			$this->redirect(array('action' => 'index'));
@@ -66,7 +108,18 @@ class UsersController extends AppController {
 		$this->set(compact('groups'));
 	}
 
-	function delete($id = null) {
+	/**
+	 * Admin function to remove a User given their id
+	 * 
+	 * Fitzretsil: I don't like this function personally
+	 * as it is too easy to accidentally delete a user,
+	 * so think it should be removed in favour of a 
+	 * manual clean up of users who have not paid for 
+	 * more then a year
+	 * 
+	 * @param string $id
+	 */
+	function admin_delete($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid id for user', true));
 			$this->redirect(array('action'=>'index'));
@@ -79,6 +132,11 @@ class UsersController extends AppController {
 		$this->redirect(array('action' => 'index'));
 	}
 
+	/**
+	 * Given a post request containing a username and
+	 * password checks if the user exists to log them
+	 * in else throws an error
+	 */
 	function login() {
 		if (!empty($this->data)) {
 			if ($this->Session->read('Auth.User')) {
@@ -90,19 +148,25 @@ class UsersController extends AppController {
 		}
 	}
 
+	/**
+	 * Logs out the current user
+	 */
 	function logout() {
 		$this->Session->setFlash('Good-Bye');
 		$this->redirect($this->Auth->logout());
 	}
 
+	/**
+	 * Returns the current user's data
+	 */
 	function home() {
-		$this->set('user', $this->User->find('first', array(
-							'conditions' => array(
-								'User.id' => $this->Session->read('Auth.User.id')
-							)
-						)));
+		$this->set( 'user', $this->User->find( 'first', array( 'conditions' => array( 'User.id' => $this->Session->read( 'Auth.User.id' ) ) ) ) );
 	}
 	
+	/**
+	 * New method to allow users to register using their Facebook
+	 * details
+	 */
 	function fbregister() {
 		define('FACEBOOK_APP_ID', '236283639834605');
 		define('FACEBOOK_SECRET', 'e95e090a2a4228926c19c32ebe0813c4');
