@@ -1,6 +1,6 @@
 <?php
 class AppController extends Controller {
-    var $components = array('Acl', 'Auth', 'Session');
+    var $components = array( 'Auth', 'Session');
 
     function beforeFilter() {
         //Configure AuthComponent
