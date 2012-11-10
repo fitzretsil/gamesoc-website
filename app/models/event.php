@@ -84,5 +84,7 @@ class Event extends AppModel {
 			'order' => ''
 		)
 	);
+
+	var $hasMany = 'Tournament';
 }
 ?>

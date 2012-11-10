@@ -70,13 +70,6 @@
                                 <?php echo $this->Html->image('f_logo.png' ); ?>
                                 <?php echo $this->Html->image('twitter-bird-dark-bgs.png'); ?>
                         </div>
-			<h1>
-				<?php echo $this->Html->link(
-					$this->Html->image('title.png', array( 'alt' => 'GameSoc' ) ), 
-					'http://www.gamesoc.org', 
-					array( 'escape' => false ) 
-				); ?>
-			</h1>
 		</div>
 		<div id="menu">
 			<?php echo $this->Html->link( 'Home', '/' ); ?>

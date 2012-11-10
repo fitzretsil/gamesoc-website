@@ -68,8 +68,9 @@ h3 {
 	font-size: 165%;
 }
 h4 {
-	color: #993;
+	color: #E52;
 	font-weight: normal;
+	border-bottom: 1px solid #666;
 }
 h5 {
 	color: #E32;
@@ -102,7 +103,7 @@ ul, li {
 	color: #fff;
 	padding: 0px 110px;
 }
-#header h1 a {
+/**#header h1 a {
 	color: #fff;
 	background: #3b3b3b;
 	font-weight: normal;
@@ -115,7 +116,7 @@ ul, li {
 }
 #header h1 a img {
 	padding: 10px 0px;
-}
+}**/
 #header #social {
 	width: 30px;
 	float: right;
@@ -172,9 +173,7 @@ ul, li {
 div.form,
 div.index,
 div.view {
-	float:right;
-	width:76%;
-	border-left:1px solid #666;
+	width:96%;
 	padding:10px 2%;
 }
 div.actions {
@@ -252,6 +251,9 @@ table td.actions a {
 }
 .cake-sql-log caption {
 	color:#fff;
+}
+table tr td dl {
+	width: 100%;
 }
 
 /** Paging **/
