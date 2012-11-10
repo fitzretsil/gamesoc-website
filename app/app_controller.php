@@ -9,8 +9,8 @@ class AppController extends Controller {
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = array('controller' => 'users', 'action' => 'home');
-		$this->Auth->allowedActions = array( 'display', 'test' );
-		$this->layout = 'space';
+	$this->Auth->allowedActions = array( 'display', 'test', 'view', 'standings' );
+	$this->layout = 'space';
     }
 }
 ?>

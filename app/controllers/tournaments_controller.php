@@ -79,6 +79,12 @@ class TournamentsController extends AppController {
 		$this->Session->setFlash(__('Tournament was not deleted', true));
 		$this->redirect(array('action' => 'index'));
 	}
+
+	function standings() {
+		$this->set( 'standings', $this->Tournament->TournamentParticipant->standings() );
+		return $this->Tournament->TournamentParticipant->standings();
+	}
+
 	function admin_index() {
 		$this->Tournament->recursive = 0;
 		$this->set('tournaments', $this->paginate());

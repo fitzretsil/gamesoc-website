@@ -86,6 +86,9 @@
 		<div id="column">
 			<h5>Upcoming Events</h5>
 			<?php echo $this->element('events'); ?>
+
+			<h5>Tournament Standings</h5>
+			<?php echo $this->element('tournament_standings'); ?>
 			
 			<h5>Twitter</h5>
 			

@@ -46,5 +46,6 @@ class Tournament extends AppModel {
 	);
 
 	var $belongsTo = 'Event';
+	var $hasMany = 'TournamentParticipant';
 }
 ?>
