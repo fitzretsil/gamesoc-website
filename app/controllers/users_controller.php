@@ -15,7 +15,7 @@ class UsersController extends AppController {
 	 * @var Controller Name
 	 */
 	var $name = 'Users';
-	
+
 	/**
 	 * Admin method to display all currently registered users
 	 * 
@@ -148,6 +148,12 @@ class UsersController extends AppController {
 		}
 	}
 
+	function committee() {
+		$committee = $this->User->find('all', array( 'conditions' => array( 'User.committee' => 1 ), 'order' => "FIELD (User.subtitle,'President','Secretary','Treasurer','Kit Monkey','Publicity','Clan Leader','Webmaster','Server Admin','Ordinary Member')" ) );
+		$this->set( 'committee', $committee );
+		return $committee;
+	}
+
 	/**
 	 * Logs out the current user
 	 */
@@ -182,7 +188,7 @@ class UsersController extends AppController {
 
 	function beforeFilter() {
 	    parent::beforeFilter(); 
-	    $this->Auth->allowedActions = array('login', 'logout', 'register', 'registered', 'fbregister' );
+	    $this->Auth->allowedActions = array('login', 'logout', 'register', 'registered', 'fbregister','committee' );
 	}
 	
 	private function _parse_signed_request($signed_request, $secret) {

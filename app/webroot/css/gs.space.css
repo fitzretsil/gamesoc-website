@@ -192,6 +192,26 @@ div.news-text {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #666;
 }
+div.member img {
+        vertical-align: top;
+        -webkit-border-radius: 5px; -moz-border-radius: 5px;
+        width: 60px;
+}
+
+div.member div.member-text {
+        display: inline-block;
+        font-size: 10px;
+}
+
+div.member {
+        margin: 5px 1px;
+        padding: 2px;
+        width: 192px;
+        background: #FFF;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        display: inline-block;
+}
 
 
 /** Tables **/
