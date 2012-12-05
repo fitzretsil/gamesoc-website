@@ -11,7 +11,7 @@ class EventsController extends AppController {
 							)));
 	}
 
-	function admin() {
+	function admin_index() {
 		$this->Event->recursive = 0;
 		$this->set('events', $this->paginate());
 	}

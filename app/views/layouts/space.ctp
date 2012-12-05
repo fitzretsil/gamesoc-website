@@ -70,6 +70,7 @@
                                 <?php echo $this->Html->image('f_logo.png' ); ?>
                                 <?php echo $this->Html->image('twitter-bird-dark-bgs.png'); ?>
                         </div>
+			<h1><?php echo $this->Html->image( 'space/header.png' ); ?></h1>
 		</div>
 		<div id="menu">
 			<?php echo $this->Html->link( 'Home', '/' ); ?>

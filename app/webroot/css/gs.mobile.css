@@ -22,21 +22,14 @@
 }
 
 /** General Style Info **/
-html {
-	background: black url('../img/space/background.png') no-repeat top center;
-}
-body {
-	background: transparent url('http://s3.roosterteeth.com/assets/style/flashy/www/rtShadow.png');
-}
 body {
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:12px;
 	margin: 0 auto;
-	width: 1000px;
 }
 a {
-	color: #3b3b3b;
+	color: #EBEBEB;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -54,7 +47,10 @@ h1, h2, h3, h4 {
 h1 {
 	background:#fff;
 	color: #3b3b3b;
-	font-size: 100%;
+	font-size: 180%;
+}
+h1 a {
+	text-decoration: none;
 }
 h2 {
 	background:#fff;
@@ -75,7 +71,6 @@ h4 {
 h5 {
 	color: #E32;
 	margin: 5%;
-	width: 90%;
 	border-bottom: 1px solid #666;
 	clear: both;
 }
@@ -84,38 +79,16 @@ ul, li {
 }
 
 /** Layout **/
-#container {
-	text-align: left;
-	width: 926px;
-	background: #3b3b3b;
-	margin: 0 auto;
-}
-
 #header{
 	padding: 10px 20px;
-	width: 895px;
 	height: 104px;
-	background: -webkit-radial-gradient(center, ellipse cover, #3B3B3B 0%,#2A2A2A 100%);
+	background: #3b3b3b;
 }
 #header h1 {
-	min-height: 110px;
-	background: transparent url('../img/gamesoclogo1.png') no-repeat left;
+	line-height:110px;
+	background: #3b3b3b url('../img/gamesoclogo1.png') no-repeat left;
 	color: #fff;
-	padding: 0px 140px;
-}
-#header h1 a {
-	color: #fff;
-	background: #3b3b3b;
-	font-weight: normal;
-	text-decoration: none;
-}
-#header h1 a:hover {
-	color: #fff;
-	background: #3b3b3b;
-	text-decoration: underline;
-}
-#header h1 a img {
-	padding: 10px 0px;
+	padding: 0px 110px;
 }
 #header #social {
 	width: 30px;
@@ -125,7 +98,6 @@ ul, li {
 	width: 30px;
 }
 #menu {
-	width: 90%;
 	background: #000;
 	padding: 3px 5%;
 }
@@ -145,25 +117,8 @@ ul, li {
 	color: #333;
 	padding: 2% 37px 8% 37px;
 	overflow: auto;
-	width: 602px;
-	float: left;
 	border-right: 1px solid #aaa;
 	min-height: 507px;
-}
-#column {
-	width: 249px;
-	background: #eee;
-	float: right;
-	min-height: 600px;
-	color: #333;
-}
-#column p {
-	clear: both;
-}
-#column img {
-	padding: 10px;
-	-webkit-border-radius: 40px;
-	-moz-border-radius: 40px;
 }
 #footer {
 	clear: both;
@@ -177,22 +132,6 @@ div.index,
 div.view {
 	width:96%;
 	padding:10px 2%;
-}
-div.actions {
-	float:left;
-	width:16%;
-	padding:10px 1.5%;
-}
-div.actions h3 {
-	padding-top:0;
-	color:#777;
-}
-div.news {
-	margin: 0px 75px;
-}
-div.news-text {
-	padding-bottom: 10px;
-	border-bottom: 1px solid #666;
 }
 div.member img {
         vertical-align: top;

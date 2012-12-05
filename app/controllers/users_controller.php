@@ -25,6 +25,9 @@ class UsersController extends AppController {
 	function admin_index() {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
+		$this->set( 'paid', $this->User->find( 'count', array( 'conditions' => array( 'User.paid' => 1 ) ) ) );
+		$this->set( 'committee', $this->User->find( 'count', array( 'conditions' => array( 'User.committee' => 1 ) ) ) );
+		$this->set( 'lifetime', $this->User->find( 'count', array( 'conditions' => array( 'User.lifetime' => 1 ) ) ) );
 	}
 
 	/**
@@ -53,8 +56,6 @@ class UsersController extends AppController {
 				$this->Session->setFlash(__('The user could not be saved. Please, try again.', true));
 			}
 		}
-		$groups = $this->User->Group->find('list');
-		$this->set(compact('groups'));
 	}
 
 	/**
@@ -94,6 +95,9 @@ class UsersController extends AppController {
 			$this->redirect(array('action' => 'index'));
 		}
 		if (!empty($this->data)) {
+			if ( strlen( $this->data['User']['password'] ) == 0 ) {
+				unset( $this->data['User']['password'] );
+			}
 			if ($this->User->save($this->data)) {
 				$this->Session->setFlash(__('The user has been saved', true));
 				$this->redirect(array('action' => 'index'));
@@ -104,8 +108,6 @@ class UsersController extends AppController {
 		if (empty($this->data)) {
 			$this->data = $this->User->read(null, $id);
 		}
-		$groups = $this->User->Group->find('list');
-		$this->set(compact('groups'));
 	}
 
 	/**
