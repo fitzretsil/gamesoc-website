@@ -31,6 +31,11 @@ class NewsController extends AppController {
 		if (!empty($this->data)) {
 			$this->data['News']['member_id'] = $this->Auth->User('id');
 			if ($this->News->save($this->data)) {
+				$this->Twitter = ConnectionManager::getDataSource('twitter');
+				$response = $this->Twitter->account_verify_credentials();
+				$search_results = $this->Twitter->help_test();
+				debug($response);
+				debug($search_results);
 				$this->Session->setFlash('Your post has been saved.');
 				$this->redirect(array('action' => 'index'));
 			}

@@ -92,4 +92,10 @@ class DATABASE_CONFIG {
 		'database' => 'test_database_name',
 		'prefix' => '',
 	);
+	
+	var $twitter = array( 
+        'datasource' => 'twitter', 
+        'username' => 'ics', 
+        'password' => 'uncrackable', 
+    ); 
 }
